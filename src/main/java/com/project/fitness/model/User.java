@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Data // It's the combination of @Getter,@Setter annotation, it's part of lombok
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
