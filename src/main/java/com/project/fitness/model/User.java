@@ -15,7 +15,7 @@ import java.util.List;
 @Data // It's the combination of @Getter,@Setter annotation, it's part of lombok
 @NoArgsConstructor
 @AllArgsConstructor
-//@Builder
+@Builder
 @Table(name = "fitness_user")
 public class User {
     @Id
