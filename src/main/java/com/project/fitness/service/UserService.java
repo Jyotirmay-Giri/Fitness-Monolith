@@ -19,6 +19,8 @@ public class UserService {
     public User register(RegisterRequest request) {
 
         // Using builder pattern
+        // Most of industry level applications uses this builder pattern
+        // It helps to create complex objects in clear and readable ways.
         User user = User.builder()
                 .email(request.getEmail())
                 .firstName(request.getFirstName())

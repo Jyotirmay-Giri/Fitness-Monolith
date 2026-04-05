@@ -25,7 +25,10 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
+
+    @CreationTimestamp // It's an annotation of hybernate and it's autometically creates the timestamp.
     private LocalDateTime createdAt;
+    @UpdateTimestamp // It's an annotation of hybernate and it's autometically Updates the timestamp.
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
