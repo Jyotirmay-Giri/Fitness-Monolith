@@ -23,8 +23,11 @@ public class ActivityController {
         return ResponseEntity.ok(activityService.trackActivity(request));
     }
 
-//    @GetMapping("")
-//    public ResponseEntity<List<ActivityResponse>> trackActivity(@RequestBody RegisterRequest registerRequest){
-//        return ResponseEntity.ok(userService.register(registerRequest));
-//    }
+    @GetMapping("")
+    public ResponseEntity<List<ActivityResponse>> getUserActivities(
+            @RequestHeader(value = "X-User-ID") String userId
+    ){
+        return ResponseEntity.ok(activityService.getUserActivities(userId));
+
+    }
 }
